@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block stylesheets %}
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"  media="screen,projection"/>
+
+	<style>
+	@media (min-width: 576px) { 
+		.nav {
+			display: block
+		}
+	}
+
+	</style>
+
+	{% endblock %}
+</head>
+<body>
+
+	
+	<div class='nav-extended'>
+		<div class="nav-wrapper">
+			<nav class="#"
+			     style="background-color: #111;">
+				<div class="container-fluid">
+					<a href="{{ path('home') }}" class="brand-logo">ipazaar</a>
+				</div>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><input 
+						class="form-control" 
+						type="active" 
+						style="margin-top: 12px;" 
+						placeholder="Search" 
+						aria-label="Search">
+					</li>
+					<li><button 
+						class="btn btn-outline-success" 
+						style="margin-left: 10px; 
+						       margin-right: 30px;
+						       margin-bottom: 9px" 
+						type="submit">
+					Search</button>
+					</li>
+
+					{% if is_granted('IS_AUTHENTICATED_FULLY') %}{% endif %}
+
+					<li><a href="{{ path('custom', { name: 'customer' }) }}">Customer</a></li>
+					<li><a href="{{ path('app_logout') }}">Logout</a></li>
+					<li><a href="{{ path('register') }}">Register</a></li>
+					
+				</ul>
+			</div>
+
+			<div class="nav-content">
+				<div class="#"
+				     style="background-color: #111">
+					<ul class="tabs tabs-transparent">
+						<li class="tab"><a class="active">Categories</a></li>
+						<li class="tab"><a class="active">Shoping</a></li>
+						<li class="tab"><a class="active">Deals</a></li>
+						<li class="tab"><a class="active">Best sellers</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="sass.html">Sass</a></li>
+		<li><a href="badges.html">Components</a></li>
+		<li><a href="collapsible.html">JavaScript</a></li>
+	</ul>
+	
+	{% block body %}{% endblock %}
+
+	
+</body>
+<footer class="#" 
+        style="background-color: #000000">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div 
+      class="container">
+      Made by ipazaar <a class="#" href="">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+<style type="text/css">
+
+body{
+	background: url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+}
+
+</style>
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js">
+</script>
+</html>

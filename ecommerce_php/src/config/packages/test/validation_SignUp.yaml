@@ -1,0 +1,9 @@
+App\Entity\User:
+    properties:
+        firstName:
+            - Regex:
+              - NotBlank: ~
+                pattern: '/\d/'
+                match:   false
+                message: Your name cannot contain a number
+                App\Entity\: ['SecurityController', 'RegistrationController']

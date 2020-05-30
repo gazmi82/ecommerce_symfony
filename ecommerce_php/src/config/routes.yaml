@@ -1,0 +1,3 @@
+#list:
+ #   path: /user/list
+  #  controller: App\Controller\MainController::list

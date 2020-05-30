@@ -1,0 +1,9 @@
+{
+    "require": {
+        "symfony/maker-bundle": "^1.14",
+        "symfony/options-resolver": "^5.0",
+        "symfony/serializer": "^5.0",
+        "symfony/property-info": "^5.0",
+        "doctrine/cache": "^1.10"
+    }
+}
